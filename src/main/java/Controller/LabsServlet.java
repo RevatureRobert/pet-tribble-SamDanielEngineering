@@ -1,5 +1,8 @@
 package Controller;
 
+import CRUD.Read;
+import Models.TribbleLabs;
+
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -16,8 +19,20 @@ public class LabsServlet extends HttpServlet {
         System.out.println("initializing");
     }
 
+    /*
+        In postman provide the parameter labId or labName of the lab and then endpoint labs and it will return the name of the lab and id
+     */
     @Override
     public void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        if (req.getParameter("labId") != null) {
+          TribbleLabs l = Read.getLabById(Integer.parseInt(req.getParameter("labId")));
+          resp.getWriter().println(l.toString());
+        }
+
+        if (req.getParameter("labName") != null) {
+            TribbleLabs l = Read.getLab(req.getParameter("labName"));
+            resp.getWriter().println(l.toString());
+        }
 
     }
 

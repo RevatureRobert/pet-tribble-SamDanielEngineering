@@ -10,4 +10,12 @@ public class TribblesInLabs {
         this.tribbles = tribbles;
         this.labs = labs;
     }
+
+    @Override
+    public String toString() {
+        return "TribblesInLabs{" +
+                "tribbles=" + tribbles.toString() +
+                ", labs=" + labs.toString() +
+                '}';
+    }
 }

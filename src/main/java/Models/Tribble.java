@@ -29,4 +29,12 @@ public class Tribble {
     public void setName(String name) {
         this.name = name;
     }
+
+    @Override
+    public String toString() {
+        return "Tribble{" +
+                "id=" + id +
+                ", name='" + name + '\'' +
+                '}';
+    }
 }
