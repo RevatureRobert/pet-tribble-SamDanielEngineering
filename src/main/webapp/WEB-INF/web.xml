@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns="http://java.sun.com/xml/ns/javaee"
+        xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
+        version="2.5">
+
+<welcome-file-list>
+    <welcome-file>welcome.html</welcome-file>
+</welcome-file-list>
+
+    <context-param>
+        <param-name>global</param-name>
+        <param-value>params</param-value>
+    </context-param>
+
+    <servlet>
+        <servlet-name>tribbles</servlet-name>
+        <servlet-class>Controller.TribblesServlet</servlet-class>
+        <load-on-startup>0</load-on-startup>
+    </servlet>
+
+    <servlet>
+        <servlet-name>labs</servlet-name>
+        <servlet-class>Controller.LabsServlet</servlet-class>
+        <load-on-startup>0</load-on-startup>
+    </servlet>
+
+    <servlet>
+        <servlet-name>tribbleslabs</servlet-name>
+        <servlet-class>Controller.TribblesInLabsServlet</servlet-class>
+        <load-on-startup>0</load-on-startup>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>tribbles</servlet-name>
+        <url-pattern>/tribbles</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>tribbles</servlet-name>
+        <url-pattern>*.tribbles</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>labs</servlet-name>
+        <url-pattern>/labs</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>labs</servlet-name>
+        <url-pattern>*.labs</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>tribbleslabs</servlet-name>
+        <url-pattern>/tribbleslabs</url-pattern>
+    </servlet-mapping>
+
+    <servlet-mapping>
+        <servlet-name>tribbleslabs</servlet-name>
+        <url-pattern>*.tribbleslabs</url-pattern>
+    </servlet-mapping>
+</web-app>

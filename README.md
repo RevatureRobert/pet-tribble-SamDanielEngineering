@@ -31,8 +31,8 @@ Create your Java models to correspond to the database tables. Each class should 
 Connect to the Database Using the JDBC API. By the end of this step, you should have full CRUD capabilities for the models.
 
 ### Servlet: 10 Points
-Add the servlet API to the project and create a custom servlet
-> Either annotation or deployment descriptor regisration of servlet is acceptable.
+Add the Controller.servlet API to the project and create a custom Controller.servlet
+> Either annotation or deployment descriptor regisration of Controller.servlet is acceptable.
 
 ### Endpoints: 5 Points Each
 Create URL enpoints that correspond to CRUD operations on the models. These endpoints should follow RESTFul operations (resources and verbs). 
